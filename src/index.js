@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./styles/index.less";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import "choerodon-ui/lib/configure";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/index.less';
+import App from './App.jsx';
+import reportWebVitals from './reportWebVitals';
+import 'choerodon-ui/lib/configure';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // 开启严格模式
 // ReactDOM.render(
