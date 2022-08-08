@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.less';
-import App from './App.jsx';
+import './styles/var/index.less';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'choerodon-ui/lib/configure';
 

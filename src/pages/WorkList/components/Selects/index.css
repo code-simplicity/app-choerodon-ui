@@ -1,0 +1,91 @@
+@import '~choerodon-ui/dist/choerodon-ui.css';
+@import '~choerodon-ui/dist/choerodon-ui-pro.css';
+.selectsWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.selectsWrapper .search {
+  width: 200px;
+  position: relative;
+  margin-right: 10px;
+  padding-left: 25px;
+  padding-top: 3px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.selectsWrapper .search input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+}
+.selectsWrapper .search input::placeholder {
+  color: #9eadc4;
+}
+.selectsWrapper .search::after {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(image/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+  color: #9eadc4;
+}
+.selectsWrapper .selectsItem:nth-child(2) {
+  margin-right: 10px;
+  width: 90px;
+}
+.selectsWrapper .selectsItem:nth-child(3) {
+  margin-right: 10px;
+  width: 90px;
+}
+.selectsWrapper .selectsItem:nth-child(4) {
+  margin-right: 10px;
+  width: 62px;
+}
+.selectsWrapper .selectsItem:nth-child(5) {
+  margin-right: 10px;
+  width: 75px;
+}
+.selectsWrapper .selectsItem:nth-child(6) {
+  margin-right: 10px;
+  width: 62px;
+}
+.selectsWrapper .selectsItem:nth-child(7) {
+  margin-right: 10px;
+  width: 75px;
+}
+.selectsWrapper .selectsItem:nth-child(8) {
+  margin-right: 10px;
+  width: 62px;
+}
+.selectsWrapper .btn {
+  position: relative;
+  background-color: #f2f3fd;
+}
+.selectsWrapper .btn .icon {
+  color: #5394f1;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.selectsWrapper .btn .icon::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 3px;
+  border-width: 5px;
+  border-color: #5394f1 transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+}
+.selectsWrapper .btn:hover {
+  background-color: #7b8cff;
+}
+.selectsWrapper .btn:hover .icon {
+  color: #fff;
+}
+.selectsWrapper .btn:hover .icon::after {
+  border-color: #fff transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+}

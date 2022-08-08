@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from 'choerodon-ui';
 import HeaderLogo from './components/HeaderLogo';
 import HeaderMenu from './components/HeaderMenu';
-import CSearch from '../../Components/CSearch';
+import CSearch from '../../components/CSearch';
 import styles from './index.module.less';
 
 const { Header } = Layout;
