@@ -16,9 +16,23 @@ const FormDataSet = {
     // DataSet 不和后端交互时，自动新建一条数据，在表单场景下比较常见
     autoCreate: true,
     fields: [
-        // 这里是与后端约定的，上传时用到的字段 
-        { name: 'agent', type: 'string', textField: 'text', valueField: 'value', options: agentOptionDataSet, required: true },
-        { name: 'type', type: 'string', textField: 'text', valueField: 'value', options: typeOptionDataSet, required: true },
+        // 这里是与后端约定的，上传时用到的字段
+        {
+            name: 'agent',
+            type: 'string',
+            textField: 'text',
+            valueField: 'value',
+            options: agentOptionDataSet,
+            required: true,
+        },
+        {
+            name: 'type',
+            type: 'string',
+            textField: 'text',
+            valueField: 'value',
+            options: typeOptionDataSet,
+            required: true,
+        },
         { name: 'description', type: 'string', required: true },
     ],
     transport: {
@@ -26,22 +40,21 @@ const FormDataSet = {
         // url 随便找的，可以自己替换
         // create / read / update / destroy 都可以等量替换成函数，create 涉及到上传新创建的数据，因此需要用到 data
         create: ({ data, params, dataSet }) => {
-            console.log(data + " ", params + " ", dataSet.toJSONData());
-            return ({
+            console.log(data + ' ', params + ' ', dataSet.toJSONData());
+            return {
                 // url: 'v1/projects/${projectId}',
                 // method: 'post',
                 // data,
-            })
-        }
+            };
+        },
     },
     events: {
         load: ({ dataSet }) => {
-            console.log('加载完成', dataSet)
+            console.log('加载完成', dataSet);
         },
         submit: ({ data }) => {
-            console.log("监听到submit事件 提交的数据:", data[0]);
+            console.log('监听到submit事件 提交的数据:', data[0]);
         },
-
-    }
+    },
 };
 export default FormDataSet;

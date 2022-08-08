@@ -61,4 +61,8 @@ module.exports = {
             'react-dom': '@hot-loader/react-dom',
         },
     },
+    // 自定义启动服务端口
+    devServer: {
+        port: 8888,
+    },
 };

@@ -68,13 +68,11 @@ const CTable = () => {
             transport: {
                 // 查询请求的 axios 配置或 url 字符串
                 read: {
-                    url:
-                        'https://www.fastmock.site/mock/423302b318dd24f1712751d9bfc1cbbc/mock/guide/user',
+                    url: 'https://www.fastmock.site/mock/423302b318dd24f1712751d9bfc1cbbc/mock/guide/user',
                     method: 'GET',
                 },
                 destroy: {
-                    url:
-                        'https://www.fastmock.site/mock/e0e74f994719101b6a238dbfb5a7088c/record_delete/table/delete',
+                    url: 'https://www.fastmock.site/mock/e0e74f994719101b6a238dbfb5a7088c/record_delete/table/delete',
                     method: 'POST',
                 },
             },
@@ -172,15 +170,17 @@ const CTable = () => {
             );
         }
         return [
-            <span className='action-link'>{btns}</span>,
-            <Button
-                size='small'
-                color='red'
-                onClick={() => handleDelete(record)}
-                disabled={record.status === 'delete'}
-            >
-                删除
-            </Button>,
+            <>
+                <span className='action-link'>{btns}</span>,
+                <Button
+                    size='small'
+                    color='red'
+                    onClick={() => handleDelete(record)}
+                    disabled={record.status === 'delete'}
+                >
+                    删除
+                </Button>
+            </>,
         ];
     };
 
