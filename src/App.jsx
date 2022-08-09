@@ -9,7 +9,6 @@
 import React, { lazy, Suspense } from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { ConfigProvider, useConfig } from 'choerodon-ui';
-import { ModalProvider } from 'choerodon-ui/pro';
 import { hot } from 'react-hot-loader';
 import './styles/App.less';
 import LayoutApp from './layouts';
@@ -32,21 +31,19 @@ const Home = lazy(() => import('@src/pages/Home'));
 function App() {
     return (
         <ConfigProvider>
-            <ModalProvider>
-                <HashRouter>
-                    <Switch>
-                        <LayoutApp>
-                            <Suspense fallback={<SpinLoading />}>
-                                <Route exact key='home' path='/' component={Home} />
-                                <Route exact path='/workbench' component={WorkBench} />
-                                <Route exact path='/calendar' component={Calendar} />
-                                <Route exact key='worklist' path='/worklist' component={WorkList} />
-                            </Suspense>
-                        </LayoutApp>
-                        <Redirect to='/' />
-                    </Switch>
-                </HashRouter>
-            </ModalProvider>
+            <HashRouter>
+                <Switch>
+                    <LayoutApp>
+                        <Suspense fallback={<SpinLoading />}>
+                            <Route exact key='home' path='/' component={Home} />
+                            <Route exact path='/workbench' component={WorkBench} />
+                            <Route exact path='/calendar' component={Calendar} />
+                            <Route exact key='worklist' path='/worklist' component={WorkList} />
+                        </Suspense>
+                    </LayoutApp>
+                    <Redirect to='/' />
+                </Switch>
+            </HashRouter>
         </ConfigProvider>
     );
 }
