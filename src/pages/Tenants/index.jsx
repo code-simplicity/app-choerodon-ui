@@ -1,6 +1,6 @@
 import { Button, DataSet } from 'choerodon-ui/pro';
 import { ButtonColor } from 'choerodon-ui/pro/lib/button/interface';
-import React, { FC, useMemo } from 'react';
+import React, { FC, useEffect, useMemo, useState } from 'react';
 import { FieldType } from 'choerodon-ui/dataset/data-set/enum';
 import { API_URL } from '@src/utils/constant';
 import styles from './index.module.less';
@@ -59,10 +59,19 @@ const Tenants = () => {
             events: {
                 load: ({ dataSet }) => {
                     console.log('加载完成', dataSet);
+                    // 需要在这里获取到数据
+                    setTenantsSideState(dataSet.records);
                 },
             },
         });
     }, []);
+    // 获取数据源
+    const [tenantsSideState, setTenantsSideState] = useState([]);
+    // useEffect(() => {
+    //     // 需要在这里获取到数据
+    //     setTenantsSideState(tenantsDataSet.records);
+    // }, []);
+
     return (
         <div className={styles['tenants-container']}>
             <div className={styles['tenants-container-header']}>
@@ -76,7 +85,7 @@ const Tenants = () => {
                 </div>
             </div>
             <div className={styles['tenants-container-main']}>
-                <TenantsSide tenantsDataSet={tenantsDataSet} />
+                <TenantsSide tenantsSideState={tenantsSideState} />
                 <div className={styles['tenants-container-main-right']}>
                     <TenantsContent />
                 </div>

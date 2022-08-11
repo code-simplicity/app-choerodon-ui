@@ -7,14 +7,11 @@ import styles from './index.module.less';
 // 租户侧栏的列表选项
 const TenantsSide = props => {
     // 解构dataSet
-    const { tenantsDataSet } = props;
-    const { records, current, data } = tenantsDataSet;
+    const { tenantsSideState } = props;
+    // const { records, current, data } = tenantsDataSet;
     // console.log('records :>> ', records);
     // console.log('current :>> ', current);
     // console.log('data :>> ', data);
-    useEffect(() => {
-        console.log('tenantsDataSet :>> ', tenantsDataSet);
-    }, []);
 
     return (
         <>
@@ -31,7 +28,7 @@ const TenantsSide = props => {
                     </div>
                 </div>
                 <div className={styles['tenants-list']}>
-                    {records.map(record => {
+                    {tenantsSideState.map(record => {
                         return (
                             <div className={styles['tenants-list-item']}>
                                 <div className={styles['tenants-list-item-top']}>
@@ -44,27 +41,6 @@ const TenantsSide = props => {
                             </div>
                         );
                     })}
-                    <div className={styles['tenants-list-item']}>
-                        <div className={styles['tenants-list-item-top']}>
-                            <div>HZERO平台</div>
-                            <Tag>启用</Tag>
-                        </div>
-                        <div className={styles['content-des']}>HZERO</div>
-                    </div>
-                    <div className={styles['tenants-list-item']}>
-                        <div className={styles['tenants-list-item-top']}>
-                            <div>HZERO平台</div>
-                            <Tag>启用</Tag>
-                        </div>
-                        <div className={styles['content-des']}>HZERO</div>
-                    </div>
-                    <div className={styles['tenants-list-item']}>
-                        <div className={styles['tenants-list-item-top']}>
-                            <div>HZERO平台</div>
-                            <Tag>启用</Tag>
-                        </div>
-                        <div className={styles['content-des']}>HZERO</div>
-                    </div>
                 </div>
             </div>
         </>
