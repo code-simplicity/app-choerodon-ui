@@ -26,6 +26,7 @@ const WorkBench = lazy(() => import('@src/pages/WorkBench'));
 const Calendar = lazy(() => import('@src/pages/Calendar'));
 const WorkList = lazy(() => import('@src/pages/WorkList'));
 const Home = lazy(() => import('@src/pages/Home'));
+const Tenants = lazy(() => import('@src/pages/Tenants'));
 
 // 一个App程序包裹
 function App() {
@@ -36,12 +37,13 @@ function App() {
                     <LayoutApp>
                         <Suspense fallback={<SpinLoading />}>
                             <Route exact key='home' path='/' component={Home} />
-                            <Route exact path='/workbench' component={WorkBench} />
-                            <Route exact path='/calendar' component={Calendar} />
+                            <Route exact key='workbench' path='/workbench' component={WorkBench} />
+                            <Route exact key='calendar' path='/calendar' component={Calendar} />
                             <Route exact key='worklist' path='/worklist' component={WorkList} />
+                            <Route exact key='tenants' path='/tenants' component={Tenants} />
                         </Suspense>
+                        {/* <Redirect to='/' /> */}
                     </LayoutApp>
-                    <Redirect to='/' />
                 </Switch>
             </HashRouter>
         </ConfigProvider>

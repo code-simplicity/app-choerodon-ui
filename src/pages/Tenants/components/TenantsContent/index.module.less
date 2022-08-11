@@ -1,0 +1,25 @@
+.right-collapse {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 99;
+    display: flex;
+    .enable-container {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+      .enable-label {
+        margin-right: 8px;
+      }
+    }
+  }
+}

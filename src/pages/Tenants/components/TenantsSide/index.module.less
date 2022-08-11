@@ -1,0 +1,55 @@
+.tenants-container-main {
+  &-left {
+    width: 216px;
+    height: 100%;
+    margin-right: 8px;
+    background-color: #fff;
+    &-search {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      .search-input {
+        margin: 0 8px;
+      }
+      .fun-item {
+        margin: 0 10px 0 0;
+      }
+      .shrinkage {
+        margin-right: -6px;
+        cursor: pointer;
+        .expend-img {
+          width: 16px;
+          background-color: #c0c1f1;
+          border-radius: 50%;
+          transform: rotate(180deg);
+          &::after {
+            rotate: 180edge;
+          }
+        }
+      }
+    }
+    .tenants-list {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      &-item {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 16px;
+        &-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 14px;
+        }
+        .content-des {
+          margin: 2px 0;
+          color: #aaadba;
+          font-size: 10px;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+      }
+    }
+  }
+}

@@ -47,9 +47,9 @@ const HeaderMenu = () => {
                     <Icon type='edit_calendar' />
                     工作日历
                 </Menu.Item>
-                <Menu.Item key='/app_market'>
-                    <Icon type='app_blocking-o' />
-                    应用市场
+                <Menu.Item key='/tenants'>
+                    <Icon type='tenants' />
+                    租户管理
                 </Menu.Item>
             </Menu>
         </>
